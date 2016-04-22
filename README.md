@@ -1,1 +1,2 @@
-# MHRYDemo
+#MHRYDemo
+基于融云模仿微信的一个demo

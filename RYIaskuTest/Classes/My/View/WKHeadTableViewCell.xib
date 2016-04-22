@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="87" id="KGk-i7-Jjw" customClass="WKHeadTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="87"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="86.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mmmmmh.png" translatesAutoresizingMaskIntoConstraints="NO" id="gKQ-VZ-bUW">
+                        <rect key="frame" x="14" y="11" width="65" height="65"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="65" id="6HI-cO-wbi"/>
+                            <constraint firstAttribute="width" constant="65" id="uUO-qU-NbD"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mmmmmh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IV8-SD-Oe7">
+                        <rect key="frame" x="91" y="18" width="156" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="ogv-LT-roN"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="云信号：menghui1061586582" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayC-4U-i9n">
+                        <rect key="frame" x="89" y="47" width="158" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="Udi-5O-En9"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ayC-4U-i9n" firstAttribute="top" secondItem="IV8-SD-Oe7" secondAttribute="bottom" constant="8" id="7ks-LJ-nUf"/>
+                    <constraint firstItem="IV8-SD-Oe7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="94P-as-ztJ"/>
+                    <constraint firstItem="IV8-SD-Oe7" firstAttribute="leading" secondItem="gKQ-VZ-bUW" secondAttribute="trailing" constant="12" id="9Je-sX-aN7"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="gKQ-VZ-bUW" secondAttribute="bottom" constant="12" id="Dpx-yj-qvV"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="IV8-SD-Oe7" secondAttribute="trailing" constant="65" id="FMh-cu-5h8"/>
+                    <constraint firstItem="gKQ-VZ-bUW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="fde-Ys-k0u"/>
+                    <constraint firstItem="ayC-4U-i9n" firstAttribute="leading" secondItem="gKQ-VZ-bUW" secondAttribute="trailing" constant="10" id="gBR-Xr-pez"/>
+                    <constraint firstItem="gKQ-VZ-bUW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="6" id="mbA-sw-BYh"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="ayC-4U-i9n" secondAttribute="trailing" constant="65" id="yp9-Hh-dtC"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="Dpx-yj-qvV"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="228" y="319.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="mmmmmh.png" width="109" height="109"/>
+    </resources>
+</document>

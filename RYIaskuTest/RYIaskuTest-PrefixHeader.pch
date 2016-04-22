@@ -1,0 +1,33 @@
+//
+//  RYIaskuTest-PrefixHeader.pch
+//  RYIaskuTest
+//
+//  Created by 孟辉 on 16/4/18.
+//  Copyright © 2016年 孟辉. All rights reserved.
+//
+
+#ifndef RYIaskuTest_PrefixHeader_pch
+#define RYIaskuTest_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* RYIaskuTest_PrefixHeader_pch */
+
+#import "RYIaskuNumberMacro.h"
+#import "RYIaskuFuntionHeader.h"
+
+
+
+
+#import "WKNavigationController.h"
+#import "WKTabBarController.h"
+#import "UIColor+FlatUI.h"
+#import "MJExtension.h"
+#import "UIImageView+WebCache.h"
+
+#import "Realm.h"
+#import "RMUserInfo.h"
+
+
+#import "UIView+MBProgressHUD.H"

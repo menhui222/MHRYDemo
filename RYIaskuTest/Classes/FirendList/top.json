@@ -1,0 +1,30 @@
+ [
+  
+  {
+  "name_spell": "qunliao",
+  "portraitUri": "http://ww1.sinaimg.cn/large/6a011e49jw1f18hercci7j2030030glf.jpg",
+  "name": "群聊",
+  "userId": ""
+  },
+  {
+  "name_spell": "gongzonghao",
+  "portraitUri": "http://ww2.sinaimg.cn/large/6a011e49jw1f18hkv6i5kj20300303yb.jpg",
+  "name": "公众号",
+  "userId": ""
+  },
+  {
+  "phone": "13581887557",
+  "name_spell": "xindepengyou",
+  "portraitUri": "http://ww4.sinaimg.cn/large/6a011e49jw1f18hftp0foj2030030dfn.jpg",
+  "name": "新的朋友",
+  "userId": ""
+  },
+  {
+  "phone": "13581887557",
+  "name_spell": "biaoqian",
+  "portraitUri": "http://ww2.sinaimg.cn/large/6a011e49jw1f18hh48jr3j2030030743.jpg",
+  "name": "标签",
+  "userId": ""
+  }
+  ]
+

@@ -1,0 +1,28 @@
+PODS:
+  - MBProgressHUD (0.9.2)
+  - MJExtension (3.0.10)
+  - Realm (0.98.8):
+    - Realm/Headers (= 0.98.8)
+  - Realm/Headers (0.98.8)
+  - RongCloudIMKit (2.4.11)
+  - SDWebImage (3.7.5):
+    - SDWebImage/Core (= 3.7.5)
+  - SDWebImage/Core (3.7.5)
+
+DEPENDENCIES:
+  - MBProgressHUD (~> 0.9.2)
+  - MJExtension (~> 3.0.7)
+  - Realm (~> 0.98.6)
+  - RongCloudIMKit (~> 2.4.11)
+  - SDWebImage (~> 3.7.5)
+
+SPEC CHECKSUMS:
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  MJExtension: d86aacb740c87519d20e3cca55b6fa4be6cc7548
+  Realm: 0e293bb62999730599efc3048896bbd4f2e43bcd
+  RongCloudIMKit: 40fefc63541927aad728e06c731d12d34de1c5fa
+  SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
+
+PODFILE CHECKSUM: 16a93635aaf2e58bcacfb8aca8db92011b466689
+
+COCOAPODS: 1.0.0.beta.4
