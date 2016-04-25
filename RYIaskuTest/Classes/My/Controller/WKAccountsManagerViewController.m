@@ -55,6 +55,7 @@ static NSString * const kAccountAddCellIdentifier = @"kAccountAddCellIdentifier"
 {
     self.tableView.editing = !self.tableView.editing;
     btn.title = self.tableView.editing? @"完成":@"编辑";
+    [self.tableView reloadData];
     
 }
 
@@ -72,8 +73,6 @@ static NSString * const kAccountAddCellIdentifier = @"kAccountAddCellIdentifier"
             [self.view  showProgressHUDText:@"当前用户不能删除"];
             return;
         }
-        
-        
         //RMUserInfo *rm_userInfo = [[RMUserInfo alloc] initWithWKUserInfo:userInfo];
         RLMResults *results = [RMUserInfo objectsWhere:[NSString stringWithFormat:@"userId == '%@'", userInfo.userId]];
         //primaryKey: @"userId"
@@ -117,18 +116,23 @@ static NSString * const kAccountAddCellIdentifier = @"kAccountAddCellIdentifier"
 #define  mark -    UITableViewDataSource -
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.dataSource.count;
+    if (self.tableView.editing) {
+        return self.dataSource.count;
+    }
+    return self.dataSource.count +1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    WKUserInfo *userInfo = self.dataSource[indexPath.row];
-    if (indexPath.row+1 == self.dataSource.count){
-    
-        WKAccountAddTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kAccountAddCellIdentifier forIndexPath:indexPath];
-        return cell;
-    }
    
+    if (!self.tableView.editing) {
+        if (indexPath.row == self.dataSource.count){
+            
+            WKAccountAddTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kAccountAddCellIdentifier forIndexPath:indexPath];
+            return cell;
+        }
+    }
+    WKUserInfo *userInfo = self.dataSource[indexPath.row];
     WKAccountsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kAccountsCellIdentifier forIndexPath:indexPath];
     [cell setModel:userInfo];
     return cell;
@@ -141,12 +145,14 @@ static NSString * const kAccountAddCellIdentifier = @"kAccountAddCellIdentifier"
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    WKUserInfo *userInfo = (WKUserInfo *)self.dataSource[indexPath.row];
     
-    if (indexPath.row+1 == self.dataSource.count){
-        [self addAccount];
+    if (!self.tableView.editing) {
+        if (indexPath.row == self.dataSource.count){
+            [self addAccount];
+            return;
+        }
     }
-    
+    WKUserInfo *userInfo = (WKUserInfo *)self.dataSource[indexPath.row];
     if ([kRYSDKConfigManager.userInfo.userId isEqualToString:userInfo.userId]){
         return;
     }
@@ -199,7 +205,7 @@ static NSString * const kAccountAddCellIdentifier = @"kAccountAddCellIdentifier"
             }
         }
         //数组中多加一条 是为了 显示最后的那个 addAccount
-        [_dataSource addObject:[WKUserInfo userInfoWithUserId:@"VIP" name:@"VIP" portrait:@"VIP" token:@"VIP"]];
+        //[_dataSource addObject:[WKUserInfo userInfoWithUserId:@"VIP" name:@"VIP" portrait:@"VIP" token:@"VIP"]];
     }
     return _dataSource;
 }

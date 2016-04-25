@@ -61,7 +61,7 @@ static NSString *const kSettingCell = @"kSettingCell";
 }
 - (void)p_accountsManager{
 
-
+   
     WKAccountsManagerViewController *accountsManagerViewController = [[WKAccountsManagerViewController alloc] init];
     [self.navigationController pushViewController:accountsManagerViewController animated:YES];
     
