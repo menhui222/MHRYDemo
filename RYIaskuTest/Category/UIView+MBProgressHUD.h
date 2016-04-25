@@ -11,5 +11,5 @@
 @interface UIView(MBProgressHUD)
 - (void)showProgressHUD;
 - (void)showProgressHUD:(NSString *)text;
-
+- (void)showProgressHUDText:(NSString *)text;
 @end

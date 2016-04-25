@@ -16,6 +16,10 @@
 		E1016CC11CC4DAA20044C24D /* WKBadgeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E1016CC01CC4DAA20044C24D /* WKBadgeButton.m */; };
 		E1016CD21CC4E1810044C24D /* UIImage+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = E1016CD11CC4E1810044C24D /* UIImage+Extend.m */; };
 		E1016CD51CC4E1C00044C24D /* UIColor+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = E1016CD41CC4E1C00044C24D /* UIColor+FlatUI.m */; };
+		E110E4191CCDB52500B5EFF6 /* WKSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E110E4171CCDB52500B5EFF6 /* WKSettingViewController.m */; };
+		E110E41A1CCDB52500B5EFF6 /* WKSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E110E4181CCDB52500B5EFF6 /* WKSettingViewController.xib */; };
+		E110E41D1CCDBDAD00B5EFF6 /* NSObject+DynamicExcuteMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = E110E41C1CCDBDAD00B5EFF6 /* NSObject+DynamicExcuteMethod.m */; };
+		E110E4201CCDBDBF00B5EFF6 /* NSObject+MethodSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = E110E41F1CCDBDBF00B5EFF6 /* NSObject+MethodSwizzling.m */; };
 		E1323F121CC0BC560016944C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E1323F111CC0BC560016944C /* main.m */; };
 		E1323F151CC0BC560016944C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E1323F141CC0BC560016944C /* AppDelegate.m */; };
 		E1323F181CC0BC560016944C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1323F171CC0BC560016944C /* ViewController.m */; };
@@ -93,6 +97,13 @@
 		E1016CD31CC4E1C00044C24D /* UIColor+FlatUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+FlatUI.h"; sourceTree = "<group>"; };
 		E1016CD41CC4E1C00044C24D /* UIColor+FlatUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+FlatUI.m"; sourceTree = "<group>"; };
 		E1016CD61CC4E2130044C24D /* RYIaskuTest-PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RYIaskuTest-PrefixHeader.pch"; sourceTree = "<group>"; };
+		E110E4161CCDB52500B5EFF6 /* WKSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKSettingViewController.h; sourceTree = "<group>"; };
+		E110E4171CCDB52500B5EFF6 /* WKSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKSettingViewController.m; sourceTree = "<group>"; };
+		E110E4181CCDB52500B5EFF6 /* WKSettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WKSettingViewController.xib; sourceTree = "<group>"; };
+		E110E41B1CCDBDAD00B5EFF6 /* NSObject+DynamicExcuteMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DynamicExcuteMethod.h"; sourceTree = "<group>"; };
+		E110E41C1CCDBDAD00B5EFF6 /* NSObject+DynamicExcuteMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DynamicExcuteMethod.m"; sourceTree = "<group>"; };
+		E110E41E1CCDBDBF00B5EFF6 /* NSObject+MethodSwizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MethodSwizzling.h"; sourceTree = "<group>"; };
+		E110E41F1CCDBDBF00B5EFF6 /* NSObject+MethodSwizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MethodSwizzling.m"; sourceTree = "<group>"; };
 		E1323F0D1CC0BC560016944C /* RYIaskuTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RYIaskuTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1323F111CC0BC560016944C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E1323F131CC0BC560016944C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -265,6 +276,10 @@
 				E1ECD9871CCA19E4000D3406 /* NSString+Extension.m */,
 				E1ECD9891CCA1E32000D3406 /* UIView+MBProgressHUD.h */,
 				E1ECD98A1CCA1E32000D3406 /* UIView+MBProgressHUD.m */,
+				E110E41B1CCDBDAD00B5EFF6 /* NSObject+DynamicExcuteMethod.h */,
+				E110E41C1CCDBDAD00B5EFF6 /* NSObject+DynamicExcuteMethod.m */,
+				E110E41E1CCDBDBF00B5EFF6 /* NSObject+MethodSwizzling.h */,
+				E110E41F1CCDBDBF00B5EFF6 /* NSObject+MethodSwizzling.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -494,6 +509,9 @@
 				E1EE7D9E1CC5CD4D0028F6E3 /* WKMyViewController.h */,
 				E1EE7D9F1CC5CD4D0028F6E3 /* WKMyViewController.m */,
 				E1EE7DA01CC5CD4D0028F6E3 /* WKMyViewController.xib */,
+				E110E4161CCDB52500B5EFF6 /* WKSettingViewController.h */,
+				E110E4171CCDB52500B5EFF6 /* WKSettingViewController.m */,
+				E110E4181CCDB52500B5EFF6 /* WKSettingViewController.xib */,
 				E13283C51CC7956E001B3EAB /* WKAccountsManagerViewController.h */,
 				E13283C61CC7956E001B3EAB /* WKAccountsManagerViewController.m */,
 				E13283C71CC7956E001B3EAB /* WKAccountsManagerViewController.xib */,
@@ -648,6 +666,7 @@
 				E1323F201CC0BC560016944C /* LaunchScreen.storyboard in Resources */,
 				E1EE7DA51CC5CD4D0028F6E3 /* WKDiscoverViewController.xib in Resources */,
 				E1B6FBDC1CC5DD6300070DA3 /* WKImageTextTableViewCell.xib in Resources */,
+				E110E41A1CCDB52500B5EFF6 /* WKSettingViewController.xib in Resources */,
 				E13283C91CC7956E001B3EAB /* WKAccountsManagerViewController.xib in Resources */,
 				E1ECD9931CCA39D2000D3406 /* WKAccountAddTableViewCell.xib in Resources */,
 				E1ED17471CC8F16F00739640 /* WKLoginViewController.xib in Resources */,
@@ -742,6 +761,7 @@
 				E1016CD51CC4E1C00044C24D /* UIColor+FlatUI.m in Sources */,
 				E1016CBE1CC4D99D0044C24D /* WKTabBarController.m in Sources */,
 				E1ECD9801CC9F1B2000D3406 /* RMUserInfo.m in Sources */,
+				E110E4201CCDBDBF00B5EFF6 /* NSObject+MethodSwizzling.m in Sources */,
 				E1ECD9881CCA19E4000D3406 /* NSString+Extension.m in Sources */,
 				E1EE7DA81CC5CD4D0028F6E3 /* WKMyViewController.m in Sources */,
 				E1EE7DA41CC5CD4D0028F6E3 /* WKDiscoverViewController.m in Sources */,
@@ -756,9 +776,11 @@
 				E1016CBD1CC4D99D0044C24D /* WKNavigationController.m in Sources */,
 				E1B6FBE21CC61A8600070DA3 /* WKFriendTableViewCell.m in Sources */,
 				E1016CC11CC4DAA20044C24D /* WKBadgeButton.m in Sources */,
+				E110E41D1CCDBDAD00B5EFF6 /* NSObject+DynamicExcuteMethod.m in Sources */,
 				E1323F461CC0C5440016944C /* RYSDKConfig.m in Sources */,
 				E1016CBB1CC4D99D0044C24D /* WKTabBarButton.m in Sources */,
 				E1016CD21CC4E1810044C24D /* UIImage+Extend.m in Sources */,
+				E110E4191CCDB52500B5EFF6 /* WKSettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

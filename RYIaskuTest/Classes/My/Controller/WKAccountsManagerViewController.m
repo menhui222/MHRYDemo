@@ -45,9 +45,46 @@ static NSString * const kAccountAddCellIdentifier = @"kAccountAddCellIdentifier"
 }
 - (void)setupView_NavBar
 {
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addAccount)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"编辑" style:UIBarButtonItemStylePlain target:self action:@selector(edit:)];
+                                              
+    
 
 }
+
+- (void)edit:(UIBarButtonItem *)btn
+{
+    self.tableView.editing = !self.tableView.editing;
+    btn.title = self.tableView.editing? @"完成":@"编辑";
+    
+}
+
+
+- (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return @"删除";
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    WKUserInfo *userInfo = self.dataSource[indexPath.row];
+    if (editingStyle ==UITableViewCellEditingStyleDelete) {
+        if (userInfo.userId == kRYSDKConfigManager.userInfo.userId) {
+            [self.view  showProgressHUDText:@"当前用户不能删除"];
+            return;
+        }
+        
+        
+        //RMUserInfo *rm_userInfo = [[RMUserInfo alloc] initWithWKUserInfo:userInfo];
+        RLMResults *results = [RMUserInfo objectsWhere:[NSString stringWithFormat:@"userId == '%@'", userInfo.userId]];
+        //primaryKey: @"userId"
+        RMUserInfo *rm_userInfo = results.lastObject;
+        [kRealmManager transactionWithBlock:^{
+            [kRealmManager deleteObject:rm_userInfo];
+        }];
+       [self refreshdata];
+    }
+}
+
 - (void)addAccount
 {
     //  去登录界面
@@ -139,7 +176,7 @@ static NSString * const kAccountAddCellIdentifier = @"kAccountAddCellIdentifier"
             [self.tableView reloadData];
         } Failer:^(NSError *error) {
             kMBProgressHUDDimiss
-            NSLog(@"error%d,%@",error.code,error.localizedDescription);
+            NSLog(@"error%ld,%@",(long)error.code,error.localizedDescription);
         }];
        
        

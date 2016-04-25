@@ -10,6 +10,7 @@
 #import "WKImageTextTableViewCell.h"
 #import "WKHeadTableViewCell.h"
 #import "WKAccountsManagerViewController.h"
+#import "WKSettingViewController.h"
 
 static NSString * const kImageTextCellIdentifier = @"kImageTextCellIdentifier";
 static NSString * const kHeadCellIdentifier = @"kHeadCellIdentifier";
@@ -31,7 +32,7 @@ static NSString * const kHeadCellIdentifier = @"kHeadCellIdentifier";
 }
 - (void)setupView_TableView
 {
-    self.tableView.tableFooterView = [[UIView alloc] init];
+
     [self.tableView registerNib:[UINib nibWithNibName:@"WKHeadTableViewCell" bundle:nil] forCellReuseIdentifier:kHeadCellIdentifier];
     [self.tableView registerNib:[UINib nibWithNibName:@"WKImageTextTableViewCell" bundle:nil] forCellReuseIdentifier:kImageTextCellIdentifier];
     self.tableView.tableFooterView = [[UIView alloc] init];
@@ -88,17 +89,18 @@ static NSString * const kHeadCellIdentifier = @"kHeadCellIdentifier";
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSDictionary *dic = self.dataSource[indexPath.section][indexPath.row];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    if (indexPath.section == 0) {
-        WKAccountsManagerViewController *accountsManagerViewController = [[WKAccountsManagerViewController alloc] init];
-        [self.navigationController pushViewController:accountsManagerViewController animated:YES];
-        return;
-    }
-    
+     NSString * method = dic[@"method"];
+    [self dynamicExcuteWithMethodName:method];
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
     return CGFLOAT_MIN;
+}
+- (void)p_settingvc{
+    WKSettingViewController *settingViewController = [[WKSettingViewController alloc] init];
+    [self.navigationController pushViewController:settingViewController animated:YES];
 }
 #pragma mark -   Getter Setter     -
 /**
@@ -111,21 +113,21 @@ static NSString * const kHeadCellIdentifier = @"kHeadCellIdentifier";
     if (!_dataSource) {
         _dataSource = @[
                          @[
-                            @{@"name":@"",@"iconImage":@""}
+                            @{@"name":@"",@"iconImage":@"",@"method":@""}
                            ],
                          @[
-                            @{@"name":@"相册",@"iconImage":@"MoreMyAlbum"}
+                            @{@"name":@"相册",@"iconImage":@"MoreMyAlbum",@"method":@""}
                           ],
                          @[
-                            @{@"name":@"收藏",@"iconImage":@"MoreMyFavorites"},
-                            @{@"name":@"钱包",@"iconImage":@"MoreMyBankCard"},
-                            @{@"name":@"优惠劵",@"iconImage":@"MyCardPackageIcon"}
+                            @{@"name":@"收藏",@"iconImage":@"MoreMyFavorites",@"method":@""},
+                            @{@"name":@"钱包",@"iconImage":@"MoreMyBankCard",@"method":@""},
+                            @{@"name":@"优惠劵",@"iconImage":@"MyCardPackageIcon",@"method":@""}
                             ],
                          @[
-                            @{@"name":@"表情",@"iconImage":@"MoreExpressionShops"}
+                            @{@"name":@"表情",@"iconImage":@"MoreExpressionShops",@"method":@""}
                             ],
                          @[
-                            @{@"name":@"设置",@"iconImage":@"MoreSetting"}
+                            @{@"name":@"设置",@"iconImage":@"MoreSetting",@"method":@"p_settingvc"}
                             ],
                          ];
     }

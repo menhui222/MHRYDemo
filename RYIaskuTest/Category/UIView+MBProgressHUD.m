@@ -24,10 +24,22 @@
 }
 
 - (void)dismissProgressHUD{
-
   MBProgressHUD *hud = [self viewWithTag:Tag];
   hud.hidden = YES;
 }
+
+
+- (void)showProgressHUDText:(NSString *)text
+{
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self animated:YES];
+    hud.mode = MBProgressHUDModeText;
+    hud.labelText = text;
+    [hud hide:YES afterDelay:1];
+
+}
+
+
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
