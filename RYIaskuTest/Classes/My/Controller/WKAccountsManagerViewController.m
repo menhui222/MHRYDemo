@@ -74,9 +74,8 @@ static NSString * const kAccountAddCellIdentifier = @"kAccountAddCellIdentifier"
             return;
         }
         //RMUserInfo *rm_userInfo = [[RMUserInfo alloc] initWithWKUserInfo:userInfo];
-        RLMResults *results = [RMUserInfo objectsWhere:[NSString stringWithFormat:@"userId == '%@'", userInfo.userId]];
         //primaryKey: @"userId"
-        RMUserInfo *rm_userInfo = results.lastObject;
+        RMUserInfo *rm_userInfo = [RMUserInfo objectForPrimaryKey:[NSString stringWithFormat:@"userId == '%@'", userInfo.userId]];
         [kRealmManager transactionWithBlock:^{
             [kRealmManager deleteObject:rm_userInfo];
         }];
