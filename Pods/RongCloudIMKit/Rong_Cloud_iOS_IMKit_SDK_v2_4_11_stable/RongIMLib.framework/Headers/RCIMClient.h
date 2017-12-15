@@ -1542,7 +1542,7 @@ __deprecated_msg("已废弃，请勿使用。");
  
  @param kefuId                客服ID
  @param isRobotResolved       是否解决问题
- @param sugest                客户建议
+ @param suggest                客户建议
  
  @discussion 此方法依赖startCustomService方法。可在客服结束之前或之后调用。
  @warning 如果你使用IMKit，请不要使用此方法。RCConversationViewController默认已经做了处理。
@@ -1566,7 +1566,7 @@ __deprecated_msg("已废弃，请勿使用。");
  
  @param kefuId                客服ID
  @param value                 分数，取值范围1-5
- @param sugest                客户建议
+ @param suggest                客户建议
  
  @discussion 此方法依赖startCustomService方法。可在客服结束之前或之后调用。
  @warning 如果你使用IMKit，请不要使用此方法。RCConversationViewController默认已经做了处理。

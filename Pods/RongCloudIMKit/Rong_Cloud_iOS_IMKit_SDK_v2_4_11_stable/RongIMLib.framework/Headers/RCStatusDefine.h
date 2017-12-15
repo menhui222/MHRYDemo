@@ -816,10 +816,28 @@ typedef NS_ENUM(NSUInteger, RCSearchType) {
     RC_SEARCH_TYPE_FUZZY = 1,
 };
 
+/*!
+ 客服服务方式
+ */
 typedef NS_ENUM(NSUInteger, RCCSModeType) {
+    /*!
+     无客服服务
+     */
     RC_CS_NoService = 0,
+    
+    /*!
+     机器人服务
+     */
     RC_CS_RobotOnly = 1,
+    
+    /*!
+     人工服务
+     */
     RC_CS_HumanOnly = 2,
+    
+    /*!
+     机器人优先服务
+     */
     RC_CS_RobotFirst= 3,
 };
 

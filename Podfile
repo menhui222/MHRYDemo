@@ -5,6 +5,8 @@ use_frameworks!
 
 target 'RYIaskuTest' do
       pod 'RongCloudIMKit', '~> 2.4.11'
+     #pod 'RongCloudIMKitWithVoip', '~> 2.5.1'
+     #pod 'RongCloudIMKitWithVoip', '~> 2.6.1'
       pod 'SDWebImage', '~> 3.7.5'
       pod 'MJExtension', '~> 3.0.7'
       pod 'Realm', '~> 0.98.6'

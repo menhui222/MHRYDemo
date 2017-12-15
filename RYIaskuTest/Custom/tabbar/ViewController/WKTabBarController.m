@@ -73,12 +73,26 @@
     [super viewWillAppear:animated];
     
     for (UIView *child in self.tabBar.subviews) {
-        if ([child isKindOfClass:[UIControl class]]) {
+        if ([child  isKindOfClass:[UIControl class]]) {
             [child removeFromSuperview];
         }
     }
 }
-
+- (void)viewWillLayoutSubviews{
+    
+    [super viewWillLayoutSubviews];
+    
+    for (UIView *child in self.tabBar.subviews) {
+        
+        if ([child isKindOfClass:NSClassFromString(@"UITabBarButton")]) {
+            
+            [child removeFromSuperview];
+            
+        }
+        
+    }
+    
+}
 /**
  *  初始化所有子控制器
  */
